@@ -18,6 +18,10 @@
 		EC7042302B18DC200037C343 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = EC70422F2B18DC200037C343 /* FirebaseAuth */; };
 		EC7042322B18DC200037C343 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = EC7042312B18DC200037C343 /* FirebaseFirestore */; };
 		EC7042342B18DC200037C343 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = EC7042332B18DC200037C343 /* FirebaseStorage */; };
+		EC7042372B1D07920037C343 /* MainMessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7042362B1D07920037C343 /* MainMessagesView.swift */; };
+		EC792F292B1D0DA2002095CF /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC792F282B1D0DA2002095CF /* FirebaseManager.swift */; };
+		EC792F2C2B1D135C002095CF /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = EC792F2B2B1D135C002095CF /* SDWebImageSwiftUI */; };
+		EC792F2F2B1D1CD8002095CF /* ChatUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC792F2E2B1D1CD8002095CF /* ChatUser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,9 @@
 		EC5981C62B18ADF2002D0E50 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EC5981D22B18BF10002D0E50 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EC5981D42B18C6AF002D0E50 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		EC7042362B1D07920037C343 /* MainMessagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMessagesView.swift; sourceTree = "<group>"; };
+		EC792F282B1D0DA2002095CF /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		EC792F2E2B1D1CD8002095CF /* ChatUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatUser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC792F2C2B1D135C002095CF /* SDWebImageSwiftUI in Frameworks */,
 				EC5981CF2B18BCF1002D0E50 /* FirebaseAuth in Frameworks */,
 				EC7042322B18DC200037C343 /* FirebaseFirestore in Frameworks */,
 				EC7042302B18DC200037C343 /* FirebaseAuth in Frameworks */,
@@ -65,6 +73,9 @@
 		EC5981BE2B18ADF1002D0E50 /* SwiftUIFirebaseChat */ = {
 			isa = PBXGroup;
 			children = (
+				EC792F2D2B1D1CB8002095CF /* Model */,
+				EC792F272B1D0D6F002095CF /* Utils */,
+				EC7042352B1D07550037C343 /* MainMessages */,
 				EC5981BF2B18ADF1002D0E50 /* SwiftUIFirebaseChatApp.swift */,
 				EC5981C12B18ADF1002D0E50 /* LoginView.swift */,
 				EC5981D42B18C6AF002D0E50 /* ImagePicker.swift */,
@@ -81,6 +92,30 @@
 				EC5981C62B18ADF2002D0E50 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EC7042352B1D07550037C343 /* MainMessages */ = {
+			isa = PBXGroup;
+			children = (
+				EC7042362B1D07920037C343 /* MainMessagesView.swift */,
+			);
+			path = MainMessages;
+			sourceTree = "<group>";
+		};
+		EC792F272B1D0D6F002095CF /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				EC792F282B1D0DA2002095CF /* FirebaseManager.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		EC792F2D2B1D1CB8002095CF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EC792F2E2B1D1CD8002095CF /* ChatUser.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -105,6 +140,7 @@
 				EC70422F2B18DC200037C343 /* FirebaseAuth */,
 				EC7042312B18DC200037C343 /* FirebaseFirestore */,
 				EC7042332B18DC200037C343 /* FirebaseStorage */,
+				EC792F2B2B1D135C002095CF /* SDWebImageSwiftUI */,
 			);
 			productName = SwiftUIFirebaseChat;
 			productReference = EC5981BC2B18ADF1002D0E50 /* SwiftUIFirebaseChat.app */;
@@ -136,6 +172,7 @@
 			mainGroup = EC5981B32B18ADF1002D0E50;
 			packageReferences = (
 				EC5981CD2B18BCF1002D0E50 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				EC792F2A2B1D135C002095CF /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = EC5981BD2B18ADF1002D0E50 /* Products */;
 			projectDirPath = "";
@@ -164,8 +201,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC792F2F2B1D1CD8002095CF /* ChatUser.swift in Sources */,
 				EC5981C22B18ADF1002D0E50 /* LoginView.swift in Sources */,
 				EC5981C02B18ADF1002D0E50 /* SwiftUIFirebaseChatApp.swift in Sources */,
+				EC792F292B1D0DA2002095CF /* FirebaseManager.swift in Sources */,
+				EC7042372B1D07920037C343 /* MainMessagesView.swift in Sources */,
 				EC5981D52B18C6AF002D0E50 /* ImagePicker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -382,6 +422,14 @@
 				minimumVersion = 10.18.0;
 			};
 		};
+		EC792F2A2B1D135C002095CF /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI?ysclid=lppway8im4345284918";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.5;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -409,6 +457,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = EC5981CD2B18BCF1002D0E50 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		EC792F2B2B1D135C002095CF /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EC792F2A2B1D135C002095CF /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
